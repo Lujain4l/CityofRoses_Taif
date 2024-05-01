@@ -1,0 +1,11 @@
+# Source: Metascan 2.6.0
+# Device: iPhone SE (2nd generation)
+#
+# Exported: 2022-05-12T05:21:50.331229Z
+#
+
+newmtl material_0
+illum 1
+map_Kd metascan_20220512-1333_tex0.jpeg
+norm metascan_20220512-1333_norm0.jpeg
+map_ao metascan_20220512-1333_ao0.jpeg
