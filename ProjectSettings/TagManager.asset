@@ -11,6 +11,7 @@ TagManager:
   - Flower4
   - Flower5
   - Flower6
+  - flowers
   layers:
   - Default
   - TransparentFX
