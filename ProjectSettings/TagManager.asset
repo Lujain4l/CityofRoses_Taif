@@ -12,6 +12,9 @@ TagManager:
   - Flower5
   - Flower6
   - flowers
+  - Water
+  - emptybottel
+  - needle
   layers:
   - Default
   - TransparentFX
