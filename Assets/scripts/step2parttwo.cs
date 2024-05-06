@@ -39,7 +39,7 @@ public class step2parttwo : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("player COMPLETE STEP");
-            StartCoroutine(DeactivateParticleSystemAfterDelay(10f));
+            StartCoroutine(DeactivateParticleSystemAfterDelay(15f));
 
             if (particleSystem1 != null)
             {

@@ -8,7 +8,7 @@ public class step2 : MonoBehaviour
     public GameObject flower2;
     public GameObject flower3;
     public GameObject flower4;
-    public ParticleSystem particleSystem2;
+
     public ParticleSystem particleSystem3;
     public AudioClip audioClip;
     public AudioSource audioSource;
@@ -23,32 +23,44 @@ public class step2 : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Flower1"))
+        if (other.CompareTag("flowers"))
         {
-            // Deactivate flower1 and activate flower3
-            flower1.SetActive(false);
-            flower3.SetActive(true);
-            audioSource.Play();
-
-        }
-        else if (other.CompareTag("Flower2"))
-        {
-            // Deactivate flower2 and activate flower4
-            flower2.SetActive(false);
-            flower4.SetActive(true);
-            audioSource.Play();
-
+            if (!flower1.activeSelf)
+            {
+                flower1.SetActive(true);
+                audioSource.Play();
+                other.gameObject.SetActive(false);
+            }
+            else if (!flower2.activeSelf)
+            {
+                flower2.SetActive(true);
+                audioSource.Play();
+                other.gameObject.SetActive(false);
+            }
+            else if (!flower3.activeSelf)
+            {
+                flower3.SetActive(true);
+                audioSource.Play();
+                other.gameObject.SetActive(false);
+            }
+            else if (!flower4.activeSelf)
+            {
+                flower4.SetActive(true);
+                audioSource.Play();
+                other.gameObject.SetActive(false);
+            }
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
-        if (!flower1.activeSelf && !flower2.activeSelf)
+        if (!flower1.activeSelf && !flower2.activeSelf && !flower3.activeSelf)
         {
-            // Both Flower1 and Flower2 are inactive, deactivate particleSystem2 and activate particleSystem3
-            particleSystem2.gameObject.SetActive(false);
+         
             particleSystem3.gameObject.SetActive(true);
         }
     }

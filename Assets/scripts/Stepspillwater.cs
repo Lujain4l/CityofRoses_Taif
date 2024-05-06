@@ -39,6 +39,7 @@ public class Stepspillwater : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
+            StartCoroutine(DeactivateParticleSystemAfterDelay(20f));
             Debug.Log("player pourwater");
 
             if (particleSystem1 != null)
