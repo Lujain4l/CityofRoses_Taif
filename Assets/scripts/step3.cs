@@ -8,7 +8,7 @@ public class step3 : MonoBehaviour
     public GameObject canvas; 
     public float displayDuration = 4f; 
 
-    private IEnumerator Start()
+    private IEnumerator Startt()
     {
        
         canvas.gameObject.SetActive(true);
@@ -20,7 +20,7 @@ public class step3 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(Start()); 
+            StartCoroutine(Startt()); 
             StartCoroutine(LoadNextScene()); 
         }
     }
